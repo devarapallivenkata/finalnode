@@ -1,0 +1,55 @@
+{"computerstore": [{
+  "brand":"HP",
+  "modelname": "PAVILION",
+  "modelnumber": "15ER1000",
+  "storagecapacity": "1 TB",
+  "price": "499.99 $",
+  "releasedate": "JAN 2016",
+  "url": "www.hp.com"
+
+},
+{
+  "brand":"HP",
+  "modelname": "ENVY",
+  "modelnumber": "14EYZ000",
+  "storagecapacity": "1 TB",
+  "price": "599.99 $",
+  "releasedate": "JAN 2018",
+  "url": "www.hp.com"
+},
+{
+  "brand":"DELL",
+  "modelname": "VOSTRO",
+  "modelnumber": "VOSTRO-14",
+  "storagecapacity": "1 TB",
+  "price": "459.99 $",
+  "releasedate": "DEC 2019",
+  "url": "www.dell.com"
+},
+{
+  "brand":"DELL",
+  "modelname": "INSPIRON",
+  "modelnumber": "INSPIRON 16",
+  "storagecapacity": "1 TB",
+  "price": "499.99 $",
+  "releasedate": "JAN 2016",
+  "url": "www.dell.com"
+},
+{
+  "brand":"APPLE",
+  "modelname": "MAC BOOK",
+  "modelnumber": "MACBOOK PRO",
+  "storagecapacity": "1 TB",
+  "price": "939.99 $",
+  "releasedate": "JAN 2018",
+  "url": "www.apple.com"
+},
+{
+  "brand":"APPLE",
+  "modelname": "MAC BOOK AIR",
+  "modelnumber": "MACBOOK AIR 15",
+  "storagecapacity": "1 TB",
+  "price": "1599.99 $",
+  "releasedate": "JAN 2024",
+  "url": "www.apple.com"
+}]}

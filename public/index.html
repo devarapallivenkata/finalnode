@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <script>
+        window.onload = function () 
+        {
+            document.querySelector('.hamburger').addEventListener('click', function (){
+                document.querySelector('.hamburger').classList.toggle('press');
+                document.querySelector('.mobile_menu').classList.toggle('press');
+            });
+        }
+    </script>
+    <style>
+        body {
+            background-image: url(https://i.postimg.cc/rmSjy3PY/back.jpg);
+            height: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .hamburger{
+            display:none;
+        }
+        .mobile_menu{
+            display: none;
+        }
+        .my_container{
+            height:100vh;
+            display:grid;
+            grid-template-columns: 1fr,1fr;
+            grid-template-rows: 0.2fr,1fr,1fr,1fr,1fr,1fr,1fr,1fr,1fr;
+            grid-gap:0.2rem;
+            grid-template-areas: 
+            "nav nav"
+            "main main"
+            "about about"
+            "education education"
+            "project project"
+            "list1 list2"
+            "experience experience"
+            "blogs blogs"
+            "footer footer"
+        }
+        nav{
+            grid-area: nav;
+            background-color:rgb(255, 255, 255,0.7);
+            border-radius: 5px;
+        }
+        nav a {
+            float: right;
+            display: block;
+            color: blue;
+            text-align: center;
+            padding: 15px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            background-color: rgb(85, 127, 218);
+            color: white;
+        }
+        main{
+            grid-area: main;  
+            background-color:rgb(255, 255, 255,0.7);
+            margin:5px;
+            padding:5px;
+            border-radius: 5px;
+        }
+        .profile1{
+            display:inline-block;
+            vertical-align: top;
+            text-align: center;
+            width: 30%;
+            margin:5px;
+            padding:5px;  
+            border-radius: 5px;
+        }
+        .profile2{
+            display:inline-block;
+            vertical-align: top;
+            text-align: left;
+            width: 65%;
+            margin:5px;
+            padding:5px;  
+            border-radius: 5px;
+        }
+        .profile2 p{
+            font-size: large;
+            text-align: left;
+        }
+        .profile_image {
+            text-align: center;
+            height:300px;
+            width:230px;
+            border-radius: 5px;
+        }
+        .name{
+            text-align: left;
+            color:rgb(69, 42, 165);
+        }
+        .job{
+            text-align: left;
+            color:rgb(85, 127, 218);
+        }
+        .side_heading{
+            color:rgb(60, 60, 225);
+        }
+        .sub_heading{
+            color:rgb(63, 63, 128);
+        }
+        .italic
+        {
+            font-style: italic;
+        }
+
+        .image_container
+        {
+            display:flex;
+            align-items: center;
+            border-radius: 10px;
+
+        }
+        .image_container img{
+            max-width: 30px;
+            margin-right: 30px;
+            border-radius: 0%;
+        }
+
+        #about{
+            grid-area: about;
+            margin:5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 30px;
+            padding-right: 30px;
+            text-align: left;
+            background-color:rgb(255, 255, 255,0.7);
+            border-radius: 5px;
+        }
+        #education{
+            grid-area: education;
+            margin:5px;
+            padding: 5px;
+            padding-left: 30px;
+            padding-right: 30px;
+            text-align: left;
+            background-color:rgb(255, 255, 255,0.7);
+            border-radius: 5px;
+        }
+        #experience{
+            grid-area: experience;
+            margin:5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 30px;
+            padding-right: 30px;
+            text-align: left;
+            background-color:rgb(255, 255, 255,0.7);
+            border-radius: 5px;
+        }
+        #project{
+            grid-area: project;
+            margin:5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color:rgb(255, 255, 255,0.7);
+            border-radius: 5px;
+        }
+        #list1 {
+            grid-area: list1;
+            margin:5px;
+            padding:5px;
+        }
+        #list2 {
+            grid-area: list2;
+            margin:5px;
+            padding:5px;
+        }
+        #project ul {
+            list-style-type: none;
+            display: flex;
+            overflow: hidden;
+        }
+        .project_details{
+
+            text-align: left;
+            margin:5px;
+            padding:5px;  
+        }
+
+        .pad
+        {
+            text-align: left;
+            margin:5px;
+            padding-left: 10px;
+            padding-right: 10px;  
+            padding-top: 0px;
+        }
+        .project_image img {
+            text-align: center;
+            align-items: center;
+            height:150px;
+            width:200px;
+            padding-right: 30px;
+            padding-top: 45px;
+            border-radius: 0%;
+            border-radius: 0px;
+        }
+
+        #blogs{
+            grid-area: blogs;
+            margin:5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 30px;
+            padding-right: 30px;
+            text-align: left;
+            background-color:rgb(255, 255, 255,0.7);
+            border-radius: 5px;
+        }
+
+        footer{
+            grid-area: footer;
+            background-color:rgb(255, 255, 255,0.7);
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            margin:5px;
+            border-radius: 5px;
+        }
+        .footer_container{
+            width: 65%;
+            display: right;
+            
+        }
+        footer img{
+
+            float: right;
+            padding-left: 20px;
+            height:50px;
+            width:50px;
+        }
+
+        @media only screen and (max-width:500px){
+            .my_container{
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.2fr;
+                grid-template-areas:
+                "nav"
+                "main"
+                "about"
+                "education"
+                "project"
+                "list1"
+                "list2"
+                "experience"
+                "blogs"
+                "footer"
+            }
+            .desktop_menu{
+                display:none;
+            }
+            /* reference used for hamburger
+            https://stackoverflow.com/questions/69541341/stuck-with-hamburger-menu
+            just used for reference not copied */
+            .hamburger{
+                position: relative;
+                display:block;
+                width: 40px;
+                cursor: pointer;
+                appearance: none;
+                background: none;
+                outline: none;
+                border: none;
+            }
+            .hamburger .menu_button, .hamburger:after, .hamburger:before{
+                content: '';
+                display: block;
+                background-color: #4672c5;
+                width:100%;
+                margin:5px;
+                padding: 3px;
+                transition: 0.5s;
+
+            }
+            .hamburger.press:before{
+                transform: rotate(-45deg) translate(-10px,6px);
+            }
+            .hamburger.press:after{
+                transform: rotate(45deg) translate(-10px,-6px);
+            }
+            .hamburger.press .menu_button{
+                opacity: 0;
+            }
+            .mobile_menu.press{
+                position: absolute;
+                top: 10%;
+                width: 200px;
+                height: auto;
+                background-color:rgb(255, 255, 255,0.7);
+                padding: 10px;
+                display:block;
+            }
+            .mobile_menu a{
+                float: right;
+                display: block;
+                color: blue;
+                text-align: center; 
+                width: 100%;
+                max-width:200px;
+                padding:5px;
+                background-color: none;
+
+            }
+            .mobile_menu a:hover {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                background-color: rgb(85, 127, 218);
+                color: white;
+            }
+            .name{
+                font-size: 20px;
+                
+                text-align: center;
+                color:rgb(69, 42, 165);
+            }
+            .job{
+                font-size: 18px;
+                text-align: center;
+                color:rgb(85, 127, 218);
+            }
+
+            .profile1{
+                text-align: center;
+                margin:5px;
+                padding:5px;  
+                border-radius: 5px;
+                width:100%;
+            }
+            
+            .profile_image {
+                text-align: center;
+                height:250px;
+                width:200px;
+                border-radius: 5px;
+            }
+            .profile2{
+                text-align: left;
+                margin:5px;
+                padding:5px;  
+                border-radius: 5px;
+                width:100%
+            }
+            .project_details{
+                text-align: left;
+                width: 100%;
+                margin:5px;
+                padding:5px;  
+            }
+            #project ul {
+                list-style-type: none;
+                display: inline;
+        
+            }
+            .pad
+            {
+                text-align: left;
+            }
+            .project_image img {
+                text-align: center;
+                align-items: center;
+                height:150px;
+                width:200px;
+                padding-right: 0px;
+                padding-top: 0px;
+                border-radius: 0%;
+                border-radius: 0px;
+            }
+            .ss
+            {       
+                text-align: center;
+                width: 100%;       
+            }
+            footer
+            {
+                text-align: center;
+                display: block;
+                align-items: center;
+                
+            }
+            .footer_container{
+                width: 100%;
+                display: block;
+                align-items: center;
+                text-align: center;
+            }
+            footer img{
+
+                align-items: center;
+                text-align: center;
+                padding-left: 10px;
+                height:30px;
+                width:30px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="my_container">
+        <nav class="desktop_menu">
+            <a href="#blogs">BLOGS</a>
+            <a href="#experience">WORK EXPERIENCE</a>
+            <a href="#project">PROJECTS</a>
+            <a href="#education">EDUCATION</a>
+            <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+        </nav>
+        <button class="hamburger">
+            <div class="menu_button"></div>
+        </button>
+        <nav class="mobile_menu">
+            <a href="#skills">SKILLS</a>
+            <a href="#about">ABOUT</a>
+            <a href="#education">EDUCATION</a>
+            <a href="#project">PROJECTS</a>
+            <a href="#experience">WORK EXPERIENCE</a>
+            <a href="#blogs">BLOGS</a>   
+        </nav>
+        <main>
+            <section class="profile1">
+                <img class= "profile_image" src="https://i.postimg.cc/5NkBJft2/profile.jpg" >
+            </section>
+            <section class="profile2" id="skills">
+            
+                <h1 class="name">DEVARAPALLI VENKATA SAI SANDEEP</h1>
+                <h2 class="job">JAVA FULL STACK DEVELOPER</h2>
+                <section class="image_container">
+                    <img src="https://i.postimg.cc/YSvCr8j9/SKILLS.png"><h3 class="side_heading">SKILLS</h3>
+                </section>
+        
+                <p><b class="sub_heading">Programming Languages:</b> Java, JavaScript, Groovy, Python, C, C++, HTML, Shell<br>
+                    <b class="sub_heading">Frameworks & Libraries:</b> Spring, Hibernate, JUnit, AngularJS, ReactJS, Node.js<br>
+                    <b class="sub_heading">Database Management:</b> MySQL, MongoDB, PostgreSQL, Oracle, DynamoDB<br>
+                    <B class="sub_heading">Tools & Platforms:</B> Git, Jenkins, Docker, AWS, Ant, Maven, Eclipse, IntelliJ</p>
+                
+            </section>
+        </main>
+
+        <div id="about" >
+            <section class="image_container">
+                <img src="https://i.postimg.cc/CMs73yDR/about.png"><h3 class="side_heading">ABOUT</h3>
+            </section>
+            <p>Experienced in Java Full Stack Developer offering 5 years 3 months experience an dtop-notch
+                abilities in organizing workflows, solving complex problems and making
+                accurate decisions based on sound judgment and analytical strengths.
+                Excellent reputation for resolving problems, improving customer satisfaction, and
+                driving overall operational improvements. Seek to bring knowledge and abilities
+                to new position with growing team. Strong requirements gathering, scope
+                development and inventory coordination abilities</p>
+        </div>
+
+        <div id="education">
+            <section class="image_container">
+                <img src="https://i.postimg.cc/CxXsGwyQ/education.png"><h3 class="side_heading">EDUCATION</h3>
+            </section>
+
+            <h5 class="sub_heading">GRADUATION</h5>
+            <p>
+                <B>MASTER OF SCIENCE IN COMPUTER SCIENCE </B>
+                <I><B>(University of New Haven, New Haven, Connecticut)</B></I><br>
+                <B>Vision:</B>To explore one of many focus areas currently in demand including: mobile applications, software development, big data, cyber forensics, wireless networking, system administration and more.<BR>
+                <B>Graduated with 3.8 GPA</B>
+            </p>
+            <h5 class="sub_heading">UNDER GRADUATION</h5>
+            <p>
+                <B>BACHELOR OF TECHNOLOGY IN COMPUTER SCIENCE AND ENGINEER </B>
+                <I><B>(Vignan's Foundation for Science, Technology & Research, Andhra Pradesh, India)</B></I><br>
+                <B>Vision:</B> To evolve as a centre of high repute in Applied Computer Science & Engineering and create computer software professionals trained on problem solving skills imbued with ethics to serve the ever evolving and emerging requirements of IT Industry and society at large.<BR>
+                <B>Graduated with 4 GPA</B>
+            </p>
+        </div>
+        <div id="project">
+  
+            <div class="image_container">
+                <img src="https://i.postimg.cc/BbSTS6DX/project.png"><h3 class="side_heading">PROJECTS</h3>
+            </div>
+            <ul class="project_details">
+                <li id="list1" class="project_image"><img src="https://i.postimg.cc/MKJcT0mK/PROJECT1.png" alt=""></li>
+                <li id="list2" class="pad"><h5 class="sub_heading">MVM - MOBILE ONLINE</h5>
+                    <p> MVM Hybrid is the next generation application that caters to the customer needs in the ever-evolving market of mobile phones,
+                         smart phones and tablet devices. It is developed for Smartphone customers to provide self-serve functions like Pay Bill,
+                          View Usage, Change Voice mail password, Check upgrade eligibility etc.,
+                    </p></li>
+                <li id="list3" class="project_image"><img src="https://i.postimg.cc/6qMdyXLz/project2.jpg" alt=""></li>
+                <li id="list4" class="pad">
+                    <h5 class="sub_heading">ROBOTIC PROCESS AUTOMATION</h5>
+                    <p> Blue Prism is an RPA Tool which holds the capability of virtual
+                        workforce powered by software robots. This helps the enterprises to
+                        automate the business operations in an agile and cost-effective manner. The
+                        tool is based on Java Programming Language and offers a visual designer
+                        with drag and drop functionalities</p>
+                    </li>
+            </ul>
+        </div>
+    
+        <div id="experience">
+            <section class="image_container">
+                <img src="https://i.postimg.cc/kgByRBHS/experience.png"><h3 class="side_heading">WORK EXPERIENCE</h3>
+            </section>
+            <h5 class="sub_heading">Full Stack Developer</h5>
+            <h6 class="italic">MICROSOFT</h6>
+            <p>
+                Worked closely with team members and testing team members to design and develop applications to meet client requirements for functionality, scalability and performance.
+                Worked effectively with cross-functional design teams to create software solutions that elevated client side experience and significantly improved overall functionality and performance.<br>
+                Modified existing applications to correct coding errors, upgrade interfaces and improve overall performance.
+                Worked closely with other business analysts to deliver high availability solutions for mission-critical applications.
+                Skilled in analyzing existing operations,process and systems to improve productivity and enhancefeatures.
+    </p>
+        </div>
+    
+        <div id="blogs" >
+            <section class="image_container">
+                <img src="https://i.postimg.cc/Bb4gjNWZ/blog.png"><h3 class="side_heading">BLOGS</h3>
+            </section>
+
+            <p>JavaScript is used by almost every website on the internet, so I embarked on a quest to find the best active JavaScript blogs for programmers.
+                Each of these sites demonstrates technical expertise, is relatively easy to comprehend, publishes content consistently, and has stood the test of time.
+            </p>
+            <p>For more information please <a href="https://draft.dev/learn/javascript-blogs" target="_blank">click here</a></p>
+        </div>
+
+        <footer>
+            <div class="ss">
+                <p><b>My portfolio Website, Contact me on Social Media</b></p>
+            </div>
+            <div class="footer_container">
+                <a href="#top"><img src="https://i.postimg.cc/mrg14bNY/ss.png"></a>
+                <a href="https://www.linkedin.com" target="_blank"><img src="https://i.postimg.cc/KYTrQCxv/linkedin.png"></a>
+                <a href="https://www.whatsapp.com" target="_blank"><img src="https://i.postimg.cc/Z5BrKX9F/whatsapp.png"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="https://i.postimg.cc/yYNm2DsG/twitter.png"></a>
+                <a href="https://www.facebook.com" target="_blank"><img src="https://i.postimg.cc/yY6jBfXv/facebook.png"></a>
+                <a href="https://www.github.com" target="_blank"><img src="https://i.postimg.cc/d369rdv2/github.png"></a>
+
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
