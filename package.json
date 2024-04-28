@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "text":"error",
+    "start": "node ./index.js",
+    "dev": "node ./index.js"
+  },
   "dependencies": {
     "git": "^0.1.5",
     "mongodb": "^6.5.0"
